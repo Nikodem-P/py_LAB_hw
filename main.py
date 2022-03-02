@@ -73,7 +73,7 @@ print(imie.capitalize() + " " + nazwisko.capitalize())
 shakira = "Ven y besame mucho El mundo no importa La noche comienza No, no, no pares ahora La-la-lala, " \
           "lala-la-la-la Lala-la-lala-la-la (Porque yo siempre te llevo) (La-la-la) Lala-la, la Lala-la-la-la Lala-la, " \
           "la-la-la-la (Adentro) Leggo Leggo De to' lo que existe, llano y profundo Lo que mas quiero en este mundo " \
-          "Es estar a tu lado, noche y día Es asi como viviria"
+          "Es estar a tu lado, noche y dia Es asi como viviria"
 
 print("la wystapilo %(x)d razy" % {"x":shakira.count("la")})
 
