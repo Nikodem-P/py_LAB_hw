@@ -5,7 +5,7 @@ array1 = numpy.arange(4, 84, 4)
 print(array1)
 
 # Zadanie 2
-array2 = numpy.arange(0.1, 5, 0.4, dtype='float64')
+array2 = numpy.arange(0.1, 5, 0.4, dtype = 'float64')
 print(array2)
 array2_int = array2.astype('int32')
 print(array2_int)
@@ -23,3 +23,15 @@ def sparr(n):
 
 
 print(sparr(3))
+
+# Zadanie 4
+
+def generuj(podstawa, operacje):
+    array = numpy.logspace(1, operacje, num = operacje, base = podstawa, dtype = 'int64')
+    return array
+
+
+print(generuj(3,10))
+
+# Zadanie 5
+
