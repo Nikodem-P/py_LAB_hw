@@ -1,6 +1,8 @@
 import numpy
 
 # Zadanie 1
+import numpy as np
+
 array1 = numpy.arange(4, 84, 4)
 print(array1)
 
@@ -44,3 +46,6 @@ def vector(n):
 print(vector(5))
 
 # Zadanie 5
+
+words = numpy.array([list('krowa'), list('aojmi'), list('awpai'), list('aejti'), list('arjai')])
+print(words)
