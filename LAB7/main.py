@@ -47,3 +47,23 @@ print(vector(5))
 
 words = numpy.array([list('krowa'), list('aojmi'), list('awpai'), list('aejti'), list('arjai')])
 print(words)
+
+# Zadanie 7
+
+def slc(matrix, axis=0):
+    rows, columns = matrix.shape
+    if axis == 0:
+        if rows % 2 == 0:
+            print(matrix)
+        else:
+            print('blad0')
+    elif axis == 1:
+        if columns % 2 == 0:
+            print(matrix)
+            print(matrix[:, 0:(columns/2)-1])
+        else:
+            print('blad1')
+    else:
+        print('Niepoprawny parametr axis.')
+
+slc(numpy.arange(12).reshape(3, 4), 1)
