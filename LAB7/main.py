@@ -45,7 +45,7 @@ def vector(n):
 
 print(vector(5))
 
-# Zadanie 5
+# Zadanie 6
 
 words = numpy.array([list('krowa'), list('aojmi'), list('awpai'), list('aejti'), list('arjai')])
 print(words)
