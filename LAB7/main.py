@@ -35,7 +35,6 @@ def generuj(podstawa, operacje):
 print(generuj(3, 10))
 
 # Zadanie 5
-# Niesprecyzowane, co ma byc w tym wektorze???
 def vector(n):
     array = numpy.linspace(n, 1, num=n)
     matrix = numpy.diag(array, 2)
