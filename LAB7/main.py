@@ -1,7 +1,6 @@
 import numpy
 
 # Zadanie 1
-import numpy as np
 
 array1 = numpy.arange(4, 84, 4)
 print(array1)
