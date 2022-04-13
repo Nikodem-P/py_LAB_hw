@@ -2,7 +2,7 @@ import numpy
 
 # Zadanie 1
 
-array1 = numpy.arange(4, 84, 4)
+array1 = numpy.arange(4, 81, 4)
 print(array1)
 
 # Zadanie 2
