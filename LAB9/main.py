@@ -24,4 +24,4 @@ narodziny_plec = narodziny.groupby(["Plec"])
 print(narodziny_plec.agg({"Liczba" : ["sum"]}))
 
 # najbardziej popularne imię dziewczynki i chłopca w danym roku (czyli po 2 rekordy na rok)
-# Nie mam pojecia jak zrobic te zadania.
+# print(narodziny.groupby(["Rok"]).agg({"Liczba" : ["max"]}))
