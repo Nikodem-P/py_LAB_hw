@@ -10,3 +10,8 @@ grupa_rok.plot(xlabel="Rok", ylabel="Liczba urodzonych", grid=True, xticks=range
 pyplot.xticks(rotation=60)
 pyplot.savefig("wykres1.png")
 pyplot.show()
+
+grupa_plec = data.groupby("Plec").agg({"Liczba" : ["sum"]})
+grupa_plec.plot(kind="bar", ylabel="Urodzenia (mln)", title="Urodzenia wg płci", legend=False, rot=0)
+pyplot.savefig("wykres2.png")
+pyplot.show()
