@@ -35,14 +35,35 @@ irisd = {"a": iris.iloc[:, 0].values,
 irisd["d"] = abs(irisd['a'] - irisd['b'])
 plt.scatter('a', 'b', c='c', cmap='PiYG', s='d', data=irisd)
 plt.show()
-plt.savefig('wykres4,png')
+plt.savefig('wykres4.png')
 
 xlsx = pd.ExcelFile("imiona.xlsx")
 narodziny = pd.read_excel(xlsx, header=0)
 
-grupa_plec = narodziny.groupby("Plec").agg({"Liczba" : ["sum"]})
+grupa_plec = narodziny.groupby("Plec").agg({"Liczba": ["sum"]})
+x = ['K', 'M']
+y = grupa_plec.iloc[:, 0].values
 plt.subplot(3, 1, 1)
-grupa_plec.plot(kind="bar", ylabel="Urodzenia (mln)", title="Urodzenia wg płci", legend=False, rot=0)
+plt.bar(x, y, color=['red', 'blue'])
+ax = plt.gca()
+ax.set_ylim([3000000, 4000000])
 x = narodziny["Rok"].unique()
 
+mezczyzni = narodziny[narodziny["Plec"] == 'M']
+kobiety = narodziny[narodziny["Plec"] == 'K']
+grupa_rok_m = mezczyzni.groupby("Rok").agg({"Liczba": ["sum"]})
+grupa_rok_k = kobiety.groupby("Rok").agg({"Liczba": ["sum"]})
+y1 = grupa_rok_m.iloc[:, 0].values
+y2 = grupa_rok_k.iloc[:, 0].values
+plt.subplot(3, 1, 2)
+plt.plot(x, y1)
+plt.plot(x, y2)
+plt.xticks(range(2000, 2018, 3))
+plt.subplot(3, 1, 3)
+grupa_rok = narodziny.groupby("Rok").agg({"Liczba": ["sum"]})
+y = grupa_rok.iloc[:, 0].values
+plt.bar(x, y)
+plt.axis([x[0], x[len(x)-1], 320000, 460000])
+plt.tight_layout()
 plt.show()
+plt.savefig('wykres5.png')
