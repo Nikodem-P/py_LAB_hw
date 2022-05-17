@@ -13,8 +13,8 @@ plt.legend()
 plt.xlabel("x")
 plt.ylabel("f(x)")
 plt.title("Wykres funkcji f(x) dla [1, 20]")
-plt.show()
 plt.savefig('wykres2.png')
+plt.show()
 
 x = np.arange(0, 30, 0.1)
 y1 = np.sin(x)
@@ -24,8 +24,8 @@ plt.plot(x, y2, 'b', label="cos(x)")
 plt.legend(loc='upper right')
 plt.xlabel("x")
 plt.ylabel("f(x)")
-plt.show()
 plt.savefig('wykres3.png')
+plt.show()
 
 iris = pd.read_csv("iris.csv", header=None, sep=',', decimal='.')
 # print(iris)
@@ -34,8 +34,8 @@ irisd = {"a": iris.iloc[:, 0].values,
          "c": np.random.randint(0, 50, 150)}
 irisd["d"] = abs(irisd['a'] - irisd['b'])
 plt.scatter('a', 'b', c='c', cmap='PiYG', s='d', data=irisd)
-plt.show()
 plt.savefig('wykres4.png')
+plt.show()
 
 xlsx = pd.ExcelFile("imiona.xlsx")
 narodziny = pd.read_excel(xlsx, header=0)
@@ -65,5 +65,6 @@ y = grupa_rok.iloc[:, 0].values
 plt.bar(x, y)
 plt.axis([x[0], x[len(x)-1], 320000, 460000])
 plt.tight_layout()
-plt.show()
 plt.savefig('wykres5.png')
+plt.show()
+
